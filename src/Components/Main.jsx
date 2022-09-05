@@ -33,7 +33,7 @@ export const Main = () => {
                 return prev+1
             })
             
-        }, 100)
+        }, 200)
 
         const famil = setInterval(() => {
             console.log("Hello Manju");
@@ -86,7 +86,7 @@ export const Main = () => {
      }
     return (
         <div>
-            <div className="top">
+            <div className="top" id="home">
                 <Slides/>
             </div>
             <div className="eyediv">
@@ -114,7 +114,7 @@ export const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className="amenities">
+            <div className="amenities" id="amenities">
                 <h1 className="ameh1">Amenities</h1>
                 <div className="lines">
                     <ul>
@@ -135,7 +135,7 @@ export const Main = () => {
                     </ul>
                 </div>
             </div>
-            <div className="project">
+            <div className="project" id="about">
                 <div className="leftpro">
                     <h1>About the project:</h1>
                     <hr />
@@ -145,7 +145,7 @@ export const Main = () => {
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/FxUMDrrxAU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div className="loc">
+            <div className="loc" id="location">
                 <h1>Location Advantages</h1>
                 <div className="locmap">
                 <ul className="adv">
@@ -162,7 +162,7 @@ export const Main = () => {
                 </div>
 
             </div>
-            <div className="btm">
+            <div className="btm" id="contact">
                 <h4>Follow Us</h4>
                 <a href="https://www.facebook.com/ifbeastwood"><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494479.png"} alt="" /></a>
                 <a href=""><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494481.png"} alt="" /></a>

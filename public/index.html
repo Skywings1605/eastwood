@@ -26,6 +26,47 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<script type='text/javascript'>
+  (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'BRum5WiLqR7LGH9vR_c', {});
+</script>
+                  
+
+<script>
+      (function (Q, R) {
+          if(Q.qr) return;
+          var u = 'https://webview.quickreply.ai/whatsapp/script.min.js';
+          var h = R.head || R.documentElement;
+          var e = R.createElement('script');
+          e.type = 'text/javascript';
+          e.async = true;
+          e.src = u;
+          Q.qr = {
+              brandSetting: {
+                  includePageLink: false,
+                  messageText: "Hi.. I have a query.",
+                  phoneNumber: "+919606795107"
+              },
+              chatButtonSetting: {
+                  sideMargin: 20,
+                  marginBottom: 20,
+                  position: "left",
+                  buttonType: "ICON_TEXT",
+                  buttonText: "Chat Now",
+                  buttonBgColor: "#04AA6D",
+                  buttonTextColor: "#fff"
+              }
+          };
+          e.onload = function () {
+              CreateWhatsappChatWidget(Q.qr);
+          };
+          h.insertBefore(e, h.lastChild);
+      })(window, document);
+</script>
+
     
     <title>React App</title>
   </head>
@@ -37,6 +78,10 @@
     <script type='text/javascript'>
       (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'BRum5WiLqR7LGH9vR_c', {});
     </script>
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+  ></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

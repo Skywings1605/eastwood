@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-around;
     background-color: #f7f4fb;
+    position: fixed;
+    width: 100%;
+    margin-top: -65px;
 }
 .leftnav {
     width: 20%;

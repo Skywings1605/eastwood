@@ -4,6 +4,9 @@
     row-gap: 25px;
     flex-wrap: wrap;
 }
+.top {
+   margin-top: 50px;
+}
 .eyetext {
     margin-top:5%;
     margin-bottom:3%;
@@ -38,6 +41,8 @@ ul {
     font-size: 20px;
 }
 .amenities {
+    margin-top: 40px;
+    padding: 2%;
     font-family: playfair;
     background-color: #81c342;
 }
@@ -65,10 +70,17 @@ ul {
     width: 45%
 }
 .leftpro hr{
-    width: 70%;
-    color: #81c342;
+    width: 65%;
+    height: 3px;
+    color: blue;
+}
+.leftpro p {
+    border: 3px solid gray;
+    padding: 5%;
+    border-radius: 20px;
 }
 .rightpro {
+    padding: 5%;
     width: 45%
 }
 iframe {
@@ -76,8 +88,7 @@ iframe {
 }
 .loc {
     background-color: #DFE9F2;
-    padding: 5%;
-    padding-top: 0%;
+    padding: 4%;
 }
 .locmap {
     display: flex;
@@ -105,6 +116,9 @@ iframe {
  }
  .btm h4 {
     margin-right: 20px;
+ }
+ h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif
  }
 
 /* ul {
@@ -142,7 +156,7 @@ iframe {
     }
     .project h1 {
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .project p {
 
@@ -162,7 +176,7 @@ iframe {
     .loc {
         background-color: #DFE9F2;
         padding: 5%;
-        padding-top: 0%;
+        border: 2px solid gray;
 
     }
     .locmap {
