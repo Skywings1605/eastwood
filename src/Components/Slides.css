@@ -1,0 +1,21 @@
+
+.carousel-control-prev-icon {
+    position: absolute;
+    background-image: url ("https://cdn-icons-png.flaticon.com/512/180/180000.png");
+}
+.w-100 {
+    width: 80px;
+    /* height: 50%; */
+}
+.carousel-control-next-icon {
+    position: absolute;
+}
+
+.d-block{
+    border: 5px solid red;
+    height: 300px;
+    width: 100%;
+}
+.ms-1 {
+    padding: 50px;
+}
