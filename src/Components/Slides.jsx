@@ -40,13 +40,7 @@ export default function Slides() {
       type="button"
       data-mdb-target="#carouselExampleIndicators"
       data-mdb-slide-to="3"
-      aria-label="Slide 4"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselExampleIndicators"
-      data-mdb-slide-to="4"
-      aria-label="Slide 5"
+      aria-label="Slide 1"
     ></button>
   </div>
   <div class="carousel-inner">
@@ -61,9 +55,6 @@ export default function Slides() {
     </div>
     <div class="carousel-item" data-mdb-interval="3000">
       <img src={banner3} class="d-block w-100" alt="Camera"/>
-    </div>
-    <div class="carousel-item" data-mdb-interval="3000">
-      <img src={banner1} class="d-block w-100" alt="Exotic Fruits"/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="prev">
