@@ -3,11 +3,13 @@
     justify-content: space-around;
     background-color: #f7f4fb;
     position: fixed;
-    width: 100%;
-    margin-top: -65px;
+    width: 75%;
+    margin-top: -113px;
+    z-index: 3;
 }
 .leftnav {
     width: 20%;
+    padding: 10px;
 
 }
 .rightnav {
@@ -24,7 +26,9 @@
 } */
 a {
     color: #3a384e;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Rubik';
+
 }
  a:hover {
     border-bottom: 2px solid greenyellow;
@@ -35,20 +39,37 @@ a {
  .logoa:hover {
     border:none
  }
- /* .logo {
-    width: 100%;
+ .logo {
+    width: 130px;
     height: 100%;
-} */
+}
+.w3-animate-right {
+    border: 1px solid red;
+    float: right;
+    margin-right: 0px;
+    /* margin-left: 100px; */
+    /* width: 40px; */
+}
+.w3-teal {
+    display: none;
+}
 
 @media only screen and (min-width: 0px) and (max-width:776px) {
+    .w3-teal {
+        display: block;
+        float: right;
+    }
     .navbar {
         flex-direction: column;
+        width: 100%;
+        display: none;
     }
     .leftnav {
-        width: 100%;
+        width: 80%;
     }
     .rightnav {
-        width: 100%;
+        width: 80%;
+        display: none;
         flex-wrap: wrap;
     }
 

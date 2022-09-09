@@ -11,17 +11,69 @@
 }
 
 .d-block{
-    height: 600px;
+    height: 100%;
     width: 100%;
+    /* margin-top: -30px; */
+    z-index: 4;
 }
 .ms-1 {
     z-index: -2;
 }
 .head {
-    border: 1px solid red;
     margin-bottom: 80px;
     margin-left: -60px;
     font-size: 50px;
-    color: black;
-    background-color: gray;
+    font-family: "Philosopher";
+    /* opacity: ; */
+    /* opacity: 0.5; */
+    display: block;
+    color: white
+   
 }
+
+  .slideUp {
+    /* top:40px; */
+    /* left:10px; */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+    animation: slideUp ease 1s forwards 1.2s;
+  }
+  .slideUp {
+    position: relative;
+    
+    /* background-color: white; */
+
+  }
+  @keyframes slideUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-120px);opacity:1;}
+  }
+
+  .leftic {
+    float: left;
+    z-index: 8;
+    /* position: fixed; */
+    left: 0;
+    /* margin-left: 5%; */
+    background-color: red;
+    margin-top: 25%;
+  }
+  .rightic {
+    /* float: left; */
+    z-index: 8;
+    /* position: fixed; */
+    /* height: 30px; */
+    right: 0;
+    margin-right: 30px;
+    background-color: red;
+    margin-top: 25%;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width:776px) {
+    .d-block{
+      height: 100%;
+      width: 100%;
+      margin-left: -2px;
+      z-index: 4;
+      margin-top: 50px;
+  }
+  }

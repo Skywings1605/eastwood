@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* padding-top: 20px; */
 }
 
 .App-logo {
@@ -36,3 +37,15 @@
     transform: rotate(360deg);
   }
 }
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity:1;
+  transition: all 1s ease;
+
+}
+ .reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+ }
