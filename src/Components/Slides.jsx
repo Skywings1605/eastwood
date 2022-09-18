@@ -45,17 +45,18 @@ export default function Slides() {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-mdb-interval="3000">
-      <img src={banner} class="d-block w-100" alt="Wild Landscape"/>
+      <img src={banner} class="d-block w-100" alt="Eastwood banner"/>
     </div>
     <div class="carousel-item" data-mdb-interval="3000">
-      <img src={banner1} class="d-block w-100" alt="Camera"/>
+      <img src={banner3} class="d-block w-100" alt="Luxury Villa"/>
     </div>
     <div class="carousel-item" data-mdb-interval="3000">
-      <img src={banner2} class="d-block w-100" alt="Exotic Fruits"/>
+      <img src={banner1} class="d-block w-100" alt="Banner 1"/>
     </div>
     <div class="carousel-item" data-mdb-interval="3000">
-      <img src={banner3} class="d-block w-100" alt="Camera"/>
+      <img src={banner2} class="d-block w-100" alt="Plots in Hoskote"/>
     </div>
+    
   </div>
   <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="prev">
   <img style={{width: "30px"}} src={"https://cdn-icons-png.flaticon.com/512/2985/2985162.png"} alt="" />

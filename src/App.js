@@ -3,12 +3,19 @@ import './App.css';
 import { Navbar } from './Components/Navbar';
 import { Main } from './Components/Main';
 import Nav from "./Components/Nav.jsx"
+import { Form } from './Components/Form';
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Navbar/>
-      <Main/>
+      <div className='leftside'>
+        <Nav/>
+        <Navbar/>
+        <Main/>
+      </div>
+      <div className='rightside'>
+        <Form/>
+
+      </div>
     </div>
   );
 }

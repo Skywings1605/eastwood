@@ -6,7 +6,7 @@
 }
 #main {
    margin-top: 109px;
-   width: 75%;
+   width: 100%;
 }
 .top{
     padding-top: -30px;
@@ -36,11 +36,10 @@
     font-family: 'Rubik'; font-size: 18px;
 }
 .lines {
-    width: 70%;
+    /* width: 0%; */
     /* border: 2px solid red; */
     margin: auto;
-    display: grid;
-    grid-template-columns: 250px 250px;
+    display: flex;
     justify-content: space-around;
     opacity: 5;
     color: white;
@@ -59,7 +58,7 @@ ul {
 }
 .amenities {
     margin-top: 40px;
-    padding: 5%;
+    padding: 3%;
    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url("https://www.azvenrealty.com/img/villa/3-bhk-villas-in-bangalore-dior.jpg");
    background-repeat: no-repeat;
    background-size: cover; 
@@ -67,20 +66,28 @@ ul {
    
 }
 .ameh1 {
-    margin-top:5%;
+    /* margin-top:5%; */
     color: gold;
-    margin-bottom:5%;
+    /* margin-bottom:5%; */
 }
 .project {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");
+    /* background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");; */
-    padding: 5%;
+    background-image: url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");; */
     display: flex;
     justify-content: space-around;
     gap: 10%;
 
+}
+.proj {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5%;
+    border: none;
+
+    /* background-image: url("http://www.jaypeegreens.com/resourceContent/country-homes-ii-bg_3205.jpg");; */
 }
 .project h1 {
     text-align: left;
@@ -98,15 +105,45 @@ ul {
     padding: 3%;
     width: 45%
 }
-.leftpro h1 {
+.proj h1 {
     color: gold;
 }
-.leftpro hr{
-    width: 65%;
+.proj hr{
+    width: 35%;
     height: 3px;
+    margin: auto;
     margin-top: -3px;
-    margin-bottom: 23px;
+    /* margin-bottom: 23px; */
     color: blue;
+}
+.amenities hr{
+  width: 18%;
+  height: 3px;
+  margin: auto;
+  margin-top: -3px;
+  margin-bottom: 23px;
+  color: blue;
+}
+.loc hr{
+  width: 35%;
+  height: 3px;
+  margin: auto;
+  margin-top: -3px;
+  /* margin-bottom: 23px; */
+  color: blue;
+}
+.policy {
+  background-color: #81c342;
+  padding: 3%;
+  padding-top: 1%;
+
+}
+.policy h3 {
+  
+}
+.lastp {
+  padding-top: 20px;
+  text-align: justify;
 }
 .leftpro p {
     border: 3px solid gray;
@@ -117,7 +154,7 @@ ul {
 }
 .rightpro {
     width: 50%;
-    padding-top: 11%;
+    padding-top: 25px;
 }
 .down {
     border: 2px solid #1d1e22;
@@ -180,8 +217,10 @@ iframe {
     /* margin-top: 10%; */
 }
 .loc h1 {
-    margin-bottom: 3%;
 
+}
+.mobiform {
+display: none;
 }
  a img {
     width: 30px;
@@ -252,11 +291,17 @@ iframe {
     
     width: 100%;
        margin: auto;
-       text-align: center;
+       display: flex;
+       text-align: left;
+       justify-content: space-around;
        flex-wrap: wrap;
        margin-top: 36px;
+       line-height: 5px;
 
        /* color: white; */
+    }
+    .address div {
+       
     }
 
 
@@ -273,16 +318,16 @@ iframe {
 .induslogo {
     /* width: 100px; */
     height: 40px;
-    /* margin-top: -10px; */
+    margin-top: -10px;
 }
 .last {
-    /* justify-content: right; */
-
-    display: flex;
+    justify-content: right;
+    display:flex;
     gap: 5px;
     justify-content: right;
-    padding: 10px;
+    padding:10px;
     padding-right: 30px;
+    line-height: 1px;
 }
 .last p {
     margin-top: 20px;
@@ -296,8 +341,8 @@ iframe {
   }
   
   .button {
-    /* min-width: 300px;
-    min-height: 60px; */
+    min-width: 300px;
+    min-height: 60px;
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     text-transform: uppercase;
@@ -378,7 +423,45 @@ iframe {
     display: block;
     color: white;
   }
+  .googlemap{
+    width: 45%;
+    /* border: 1px solid red; */
+    height: 80;
+  }
+  .rera {
+    text-align: left;
+    padding-left: 18%;
+  }
+  .pop:focus {
+    /*  */
+  }
+  .addiv {
+    list-style: 0px;
+  }
+  .addiv>p {
+    /* margin-top: 0px; */
+    margin-bottom: 5px;
+  }
   @media only screen and (min-width: 0px) and (max-width:776px) {
+    .last {
+        /* justify-content: right; */
+        /* gap: 5px; */
+        /* justify-content: right; */
+        display:block;
+        padding-left: 14%;
+        padding-right: 30px;
+        line-height: 1px;
+    }
+    .googlemap{
+        width: 100%;
+    }
+    .rera {
+        text-align: left;
+        padding-left: 0%;
+        padding: 0px;
+        font-size: 12px;
+        /* border: 1px solid red; */
+      }
     .formdiv {
         display: block;
         background: #060e33;
@@ -417,6 +500,7 @@ iframe {
         width: 100%;
         padding: 0px;
         font-size: 15px;
+        border: none;
     }
     .btm {
         flex-direction: column;
@@ -428,13 +512,11 @@ iframe {
     .lines {
         /* width: 70%; */
         margin: auto;
-        display: grid;
-        grid-template-columns: 100%;
+        /* grid-template-columns: 100%; */
         justify-content: space-around;
     }
     .project {
-        background-color: #f7f4fb;
-        padding: 5%;
+        /* background-color: #f7f4fb; */
         display: flex;
         justify-content: space-around;
         /* gap: 10%; */
@@ -473,7 +555,6 @@ iframe {
     .loc {
         background-color: #DFE9F2;
         padding: 5%;
-        border: 2px solid gray;
 
     }
     .locmap {
@@ -510,4 +591,43 @@ iframe {
         margin: auto;
         /* flex-wrap: wrap; */
     }
+    .mobiform {
+        display: block;
+        padding: 5%;
+        text-align: left;
+    }
+    .mobiform label {
+        justify-content: left;
+    }
+    .button {
+        /* border: 2px solid red; */
+        width: 50px;
+        padding: 3px;
+        font-size: 15px;
+    }
+    .button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  .last {
+    padding-top: 0px;
+  }
+  .address{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .policy {
+    padding-bottom: 80px;
+  }
   }

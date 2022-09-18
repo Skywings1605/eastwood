@@ -1,44 +1,89 @@
+import {useState,useEffect} from 'react'
+import axios from 'axios'
+import "./Form.css"
+
 export const Form = () => {
-    return (
-        <div id="mc_embed_signup">
-    <form action="https://gmail.us9.list-manage.com/subscribe/post?u=99f241fd8a5f3b36e71d721e8&amp;id=de8869d1ef&amp;f_id=00bc09e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <h2>Subscribe</h2>
-        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required/>
-	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME"/>
-	<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group">
-	<label for="mce-LNAME">Last Name </label>
-	<input type="text" value="" name="LNAME" class="" id="mce-LNAME"/>
-	<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group size1of2">
-	<label for="mce-PHONE">Phone Number </label>
-	<input type="text" name="PHONE" class="" value="" id="mce-PHONE"/>
-	<span id="mce-PHONE-HELPERTEXT" class="helper_text"></span>
-</div>
-	<div id="mce-responses" class="clear foot">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>   
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_99f241fd8a5f3b36e71d721e8_de8869d1ef" tabindex="-1" value=""/></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"/>
-                <p class="brandingLogo"><a href="http://eepurl.com/h-kZY1" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"/></a></p>
-            </div>
+
+  // form states
+  const [name, setName]=useState('');
+  const [phone, setPhone]=useState('');
+  const [email, setEmail]=useState('');
+  const [message, setMessage]=useState('');
+
+  // retrived data state
+  const [data, setData]=useState([]);
+
+  // submit event
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(name, phone, email, message);
+
+    // our object to pass
+    const data = {
+      Name:name,
+      Email:email,
+      Phone:phone,
+      Message:message
+    }
+    axios.post('https://sheet.best/api/sheets/30feffdc-bec7-4f19-8059-cfb375161dc5',data).then(response=>{
+      console.log(response);
+      setName('');
+      setPhone('');
+      setEmail('');
+      setMessage('');
+    })
+  }
+
+  // // getting data function
+  // const getData=()=>{
+  //   axios.get('https://sheet.best/api/sheets/e7a8bead-e947-4de5-9421-8e17433a3fff').then((response)=>{
+  //     setData(response.data);
+  //   })
+  // }
+
+  // // triggering function
+  // useEffect(()=>{
+  //   getData();
+  // },[data])
+
+  return (
+    <div className="formdi">
+      <br></br>
+      <h3 className='formh3'>BOOK A SITE VISIT NOW</h3>
+      {/* <br></br> */}
+      <form autoComplete="off" className='form-group'
+      onSubmit={handleSubmit}>
+        <label>Name</label>
+        <input type='text' className='form-control' required
+          placeholder='Enter your name' onChange={(e)=>setName(e.target.value)}
+          value={name}
+        />
+        <br></br>
+        <label>Phone Number</label>
+        <input type='text' className='form-control' required
+          placeholder='Enter your Mobile number' onChange={(e)=>setPhone(e.target.value)}
+          value={phone}
+        />
+        <br></br>
+        <label>Email</label>
+        <input type='text' className='form-control' required
+          placeholder='Enter your Email'
+          onChange={(e)=>setEmail(e.target.value)}
+          value={email}
+        />
+        <br></br>
+        <label>Message</label>
+        <input type='text' className='form-control' required
+          placeholder='Enter your message'
+          onChange={(e)=>setMessage(e.target.value)}
+          value={message}
+        />
+        <br></br>
+		
+        <div style={{display:"flex",justifyContent:'flex-end'}}>
+          <button type='submit' className='btn btn-primary'>Submit</button>
         </div>
+      </form>
     </div>
-</form>
-</div>
-    )
+  );
 }

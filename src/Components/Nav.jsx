@@ -4,6 +4,10 @@ import Box from '@mui/material/Box';
 import logo from "./Images/eastlogo.svg"
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
+import {useState,useEffect} from 'react'
+import axios from 'axios';
+import Popup from 'reactjs-popup';
+import "./PopUp.css";
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
@@ -18,9 +22,39 @@ import Gallery from '@mui/icons-material/Photo';
 import Event from '@mui/icons-material/EventNote';
 import SvgIcon from '@mui/material/SvgIcon';
 import styled from "styled-components"
+import { PopupDiv } from './PopUp';
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  // form states
+  const [name, setName]=useState('');
+  const [phone, setPhone]=useState('');
+  const [email, setEmail]=useState('');
+  const [message, setMessage]=useState('');
+
+  // retrived data state
+  const [data, setData]=useState([]);
+
+  // submit event
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(name, phone, email, message);
+
+    // our object to pass
+    const data = {
+      Name:name,
+      Email:email,
+      Phone:phone,
+      Message:message
+    }
+    axios.post('https://sheet.best/api/sheets/30feffdc-bec7-4f19-8059-cfb375161dc5',data).then(response=>{
+      console.log(response);
+      setName('');
+      setPhone('');
+      setEmail('');
+      setMessage('');
+    })
+  }
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -49,7 +83,7 @@ export default function AccountMenu() {
       backgroundColor: "#f7f4fb",
       // marginRight:"0px",
       justifyContent:"space-between",
-      marginTop:"-45px"
+      // marginTop:"-45px"
     }}>
     {/* <React.Fragment> */}
       {/* <Box sx={{ display: 'flex', justifyContent:"space-between", alignItems: 'center', }}> */}
@@ -100,7 +134,7 @@ export default function AccountMenu() {
               height: 10,
               bgcolor: 'background.paper',
               transform: 'translateY(-50%) rotate(45deg)',
-              zIndex: 0,
+              zIndex: 2,
             },
           },
         }}
@@ -113,7 +147,7 @@ export default function AccountMenu() {
             </ListItemIcon> <a href='#'>Home</a>
         </MenuItem>
         <MenuItem>
-          <Avatar /> <a href='#project'>About Us</a>
+          <Avatar /> <a href='#about'>About Us</a>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
@@ -126,13 +160,14 @@ export default function AccountMenu() {
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
-          <a href='#contactus'>Contact</a>
+          <a href='#contact'>Contact</a>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-          <a href={require("./Images/IFB_Eastwood_Brochure.pdf")} download="IFB_Eastwood_Brochure">Download Brochure</a>
+          <a href='#download'>Download Brochure
+          </a>
         </MenuItem>
       </Menu>
     {/* </React.Fragment> */}
