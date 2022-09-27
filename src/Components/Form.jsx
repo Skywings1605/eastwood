@@ -1,8 +1,13 @@
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import "./Form.css"
+import { ThankYou } from './ThankYou'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Form = () => {
+  const [submit, setSubmit] = useState(false);
+  const navigate = useNavigate()
+
 
   // form states
   const [name, setName]=useState('');
@@ -15,7 +20,7 @@ export const Form = () => {
 
   // submit event
   const handleSubmit=(e)=>{
-    e.preventDefault();
+    // e.preventDefault();
     console.log(name, phone, email, message);
 
     // our object to pass
@@ -23,15 +28,16 @@ export const Form = () => {
       Name:name,
       Email:email,
       Phone:phone,
-      Message:message
     }
-    axios.post('https://sheet.best/api/sheets/30feffdc-bec7-4f19-8059-cfb375161dc5',data).then(response=>{
+    axios.post('https://sheet.best/api/sheets/55a4cb11-9b00-429d-a915-20f1d35f165f',data).then(response=>{
       console.log(response);
       setName('');
       setPhone('');
       setEmail('');
-      setMessage('');
     })
+    setSubmit(true)
+    navigate("/thankyou")
+    
   }
 
   // // getting data function
@@ -48,42 +54,36 @@ export const Form = () => {
 
   return (
     <div className="formdi">
-      <br></br>
+      {submit ? <ThankYou/> :
+      <>
       <h3 className='formh3'>BOOK A SITE VISIT NOW</h3>
       {/* <br></br> */}
       <form autoComplete="off" className='form-group'
       onSubmit={handleSubmit}>
         <label>Name</label>
-        <input type='text' className='form-control' required
+        <input type='text' id='in1' className='form-control fin' required
           placeholder='Enter your name' onChange={(e)=>setName(e.target.value)}
           value={name}
         />
         <br></br>
         <label>Phone Number</label>
-        <input type='text' className='form-control' required
+        <input type='tel' pattern='[6-9]{1}[0-9]{9}' id='in2' className='form-control fin' required
           placeholder='Enter your Mobile number' onChange={(e)=>setPhone(e.target.value)}
           value={phone}
         />
         <br></br>
         <label>Email</label>
-        <input type='text' className='form-control' required
+        <input type='email' id='in3' className='form-control fin' required
           placeholder='Enter your Email'
           onChange={(e)=>setEmail(e.target.value)}
           value={email}
         />
         <br></br>
-        <label>Message</label>
-        <input type='text' className='form-control' required
-          placeholder='Enter your message'
-          onChange={(e)=>setMessage(e.target.value)}
-          value={message}
-        />
-        <br></br>
-		
         <div style={{display:"flex",justifyContent:'flex-end'}}>
-          <button type='submit' className='btn btn-primary'>Submit</button>
+          <button type='submit' className='btn btn-primary'>{name != "" && phone != "" && email != "" ? "Submit":"Submit"}</button>
         </div>
-      </form>
+      </form></>
+      }
     </div>
   );
 }

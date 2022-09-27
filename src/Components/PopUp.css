@@ -28,8 +28,18 @@
   [data-popup='tooltip'].popup-overlay {
     background: transparent;
   }
+  .form-group {
+    width: 100%;
+  }
 
-@media only screen and (min-width: 0px) and (max-width:776px) {
+@media only screen and (min-width: 0px) and (max-width:855px) {
+  .form-group {
+    width: 60%;
+  }
+  .form-control{
+    width: 200px;
+
+  }
     .popdiv {
         width: auto;
     }

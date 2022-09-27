@@ -68,7 +68,7 @@
     margin-top: 25%;
   }
 
-  @media only screen and (min-width: 0px) and (max-width:776px) {
+  @media only screen and (min-width: 0px) and (max-width:855px) {
     .d-block{
       height: 100%;
       width: 100%;

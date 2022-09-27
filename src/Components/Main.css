@@ -164,6 +164,10 @@ ul {
     background-color: #81c342;
     width: 80px;
 }
+.fmin {
+  /* border: 1px solid red; */
+  width: 100%;
+}
 .down:hover {
     background-color: #060e33;
     color: white;
@@ -182,6 +186,9 @@ iframe {
 .loc h1 {
     color: gold;
 }
+.white {
+  color: white;
+}
 .locmap {
     display: flex;
     padding: 3%;
@@ -196,20 +203,6 @@ iframe {
     height: 60%;
     /* font-size: 20px; */
     color: white;    
-}
-.adv {
-    animation: slide-up 2s;
-}
-
-@keyframes slide-up {
-    from {
-        opacity: 0.2;
-        line-height: 200px;
-    }
-    to {
-        opacity: 1;
-        line-height: 20px;
-    }
 }
 .map {
     width: 40%;
@@ -230,6 +223,10 @@ display: none;
     padding-top: 35px;
     /* padding-left: 180px; */
     background-color: #ddd;
+
+ }
+ .outpop {
+  width: 350px;
 
  }
 
@@ -442,7 +439,15 @@ display: none;
     /* margin-top: 0px; */
     margin-bottom: 5px;
   }
-  @media only screen and (min-width: 0px) and (max-width:776px) {
+  @media only screen and (min-width: 0px) and (max-width:855px) {
+    .fmin {
+      /* border: 1px solid red; */
+      width: 265px;
+    }
+    .outpop{
+      width: 300px;
+      /* border: 2px solid green; */
+    }
     .last {
         /* justify-content: right; */
         /* gap: 5px; */

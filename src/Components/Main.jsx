@@ -91,6 +91,9 @@ export const Main = () => {
             <div className="top" id="home">
                 <Slides/>
             </div>
+            <div  className="mobiform" >
+            <Form/>
+        </div>
 
             <div className="eyediv reveal">
                 <h1 className="eyetext">EYE-CATCHING LOCATIONS WITH EXCEPTIONAL SPECIALTIES AT GREAT PRICES.</h1>
@@ -113,7 +116,7 @@ export const Main = () => {
                     <div className="grid">
                         <img src={icon4} alt="" />
                         <p className="green">{project}%</p>
-                        <p className="pt" >Project Completed</p>
+                        <p className="pt" id="ameniti">Project Completed</p>
                     </div>
                 </div>
                 <p id="amenities"></p>
@@ -189,7 +192,7 @@ export const Main = () => {
                     <li>Outer Ring Road Junction is at easy connectivity.</li>
                 </ul>
                 <div className="googlemap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.0918132842153!2d77.85673461954102!3d13.156608361099371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae075351f94731%3A0x16a6269175d7282e!2sEastwood%20-%20Residential%20Plots%20In%20Hoskote!5e0!3m2!1sen!2sin!4v1663232742972!5m2!1sen!2sin" width="600" height="380" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.0918132842153!2d77.85673461954102!3d13.156608361099371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae075351f94731%3A0x16a6269175d7282e!2sEastwood%20-%20Residential%20Plots%20In%20Hoskote!5e0!3m2!1sen!2sin!4v1663232742972!5m2!1sen!2sin" width="600" height="480" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 </div>
 
@@ -209,13 +212,10 @@ export const Main = () => {
                     
                 </div> */}
                 <p id="form"></p>
-        <div  className="mobiform" >
-            <Form/>
-            <p id="contact"></p>
-        </div>
             <section id="contactus">
-            <div className="btm" >
-            <div className="icns">
+            <p id="contact"></p>
+            <div className="btm reveal" >
+            <div className="icns reveal">
                 <a href="https://www.facebook.com/ifbeastwood" target={1} className="fb"><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494479.png"} alt="" /></a>
                 <a href="https://twitter.com/IfbEastwood_blr" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494481.png"} alt="" /></a>
                 <a href="https://instagram.com/ifbeastwood_blr?igshid=YmMyMTA2M2Y=" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/2111/2111463.png"} alt="" /></a>
@@ -228,7 +228,8 @@ export const Main = () => {
                     <p>Sy Nos. 31/7,</p>
                     <p>31/8, 31/11 & 35,</p>
                     <p>Bagalur Village,</p>
-                        <p>Sulibele Hobli, Hoskote Taluk,</p>
+                        <p>Sulibele Hobli,</p>
+                        <p>Hoskote Taluk,</p>
                         <p>Bangalore Rural – 562114.</p>
                         <p>Karnataka.</p>
                         

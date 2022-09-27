@@ -23,6 +23,8 @@ import Event from '@mui/icons-material/EventNote';
 import SvgIcon from '@mui/material/SvgIcon';
 import styled from "styled-components"
 import { PopupDiv } from './PopUp';
+import CustomizedDialogs from "./Dialog.jsx";
+
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -78,21 +80,20 @@ export default function AccountMenu() {
       zIndex:7,
       position:"fixed",
       padding:"10px",
-      paddingTop: "20px",
-      paddingBottom:"10px",
+      // paddingTop: "20px",
+      // paddingBottom:"10px",
       backgroundColor: "#f7f4fb",
       // marginRight:"0px",
       justifyContent:"space-between",
-      // marginTop:"-45px"
+      // marginTop:"10px"
     }}>
     {/* <React.Fragment> */}
       {/* <Box sx={{ display: 'flex', justifyContent:"space-between", alignItems: 'center', }}> */}
         <Typography sx={{ minWidth: 70, float:"left"}}><a><img className='slogo' src={logo} alt="" /></a></Typography>
-        {/* <Typography sx={{ minWidth: 70 }}><a>About Us</a></Typography>
-        <Typography sx={{ minWidth: 70 }}><a>Amenities</a></Typography>
+        {/* <Typography sx={{ minWidth: 70 }}><a>Amenities</a></Typography>
         <Typography sx={{ minWidth: 70 }}><a>Contact</a></Typography>
         <Typography sx={{ minWidth: 70 }}><a></a>Download Brochure</Typography> */}
-        
+        <div id="navmenu">
         <Tooltip title="Menu">
           <IconButton
             onClick={handleClick}
@@ -102,9 +103,12 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Typography sx={{ minWidth: 70 }}><a className='menuicon'><img src={"https://cdn-icons-png.flaticon.com/512/1665/1665676.png"}className="stlogo" alt="" /></a></Typography>
+            <Typography sx={{ minWidth: 70, right: 0 }}><a className='menuicon'><img src={"https://cdn-icons-png.flaticon.com/512/1665/1665676.png"}className="stlogo" alt="" /></a></Typography>
           </IconButton>
         </Tooltip>
+        <Typography sx={{ minWidth: 70 }}> <CustomizedDialogs/></Typography>
+        </div>
+        
       {/* </Box> */}
       <Menu
         anchorEl={anchorEl}
@@ -144,16 +148,18 @@ export default function AccountMenu() {
         <MenuItem>
             <ListItemIcon>
                 <Home fontSize="small" />
-            </ListItemIcon> <a href='#'>Home</a>
+            </ListItemIcon> 
+            <a href='#'>Home</a>
         </MenuItem>
         <MenuItem>
-          <Avatar /> <a href='#about'>About Us</a>
+          <Avatar /> 
+          <a href='#about'>About Us</a>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <Event fontSize="small" />
           </ListItemIcon>
-          <a href='#amenities'>Amenities</a>
+          <a href='#ameniti'>Amenities</a>
         </MenuItem>
         
         <MenuItem>
@@ -162,14 +168,14 @@ export default function AccountMenu() {
           </ListItemIcon>
           <a href='#contact'>Contact</a>
         </MenuItem>
-        <MenuItem>
+        {/* <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-          <a href='#download'>Download Brochure
-          </a>
         </MenuItem>
+          <CustomizedDialogs/> */}
       </Menu>
+      
     {/* </React.Fragment> */}
     </nav>
   );

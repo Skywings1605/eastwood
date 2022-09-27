@@ -4,7 +4,7 @@ import banner from "./Images/banner.png"
 import banner1 from "./Images/banner2.png"
 import banner2 from "./Images/banner3.png"
 import banner3 from "./Images/banner4.png"
-import gate from "./Images/gate.png"
+// import gate from "./Images/gate.png"
 // import plot from "./Images/plot.png"
 import {
   MDBCarousel,

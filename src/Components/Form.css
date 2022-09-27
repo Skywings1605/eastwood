@@ -1,7 +1,7 @@
 .formdi {
     align-items: left;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     /* position: fixed; */
     width: 100%;
 }
@@ -13,4 +13,25 @@ label {
     font-weight: 500;
     font-family: "Rubik";
     text-align: center;
+    margin-top: 20px;
+}
+.form-control {
+    width: 100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width:855px) {
+    .formdi{
+        padding: 10px;
+        /* padding-top: 5px; */
+        /* padding-bottom: 5px; */
+        border: 2px solid gray;
+        border-radius: 10px;
+    }
+    .formh3 {
+        /* margin-top: -5px; */
+    }
+    #in1, #in2, #in3 {
+        width:300px;
+        /* border: 1px solid green */
+    }
 }

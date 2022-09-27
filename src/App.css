@@ -1,8 +1,11 @@
 .App {
   text-align: center;
-  display: flex;
-
+  
   /* padding-top: 20px; */
+}
+
+.appmain {
+  display: flex;
 }
 .leftside {
   width: 75%;
@@ -17,15 +20,46 @@
   border: 1px solid gray;
 
 }
+.cooki {
+  margin-left: '25%';
+  display: flex;
+  gap: 1%;
+  /* margin-top:"20px"; */
+  text-align: right;
+  align-items:"end";
+  margin-left: "25%";
+  position:"fixed";
+  height: "100%";
+  z-index: "8";
+  /* border: 1px solid red; */
+  width: 70%;
+  padding-top: 7px;
+  padding-left: 25%;
+}
+.cooki> input {
+  width: 40%;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media only screen and (min-width: 0px) and (max-width:776px) {
+@media only screen and (min-width: 0px) and (max-width:855px) {
   .leftside{
     width:100%;
+  }
+  .cooki {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    padding-top: 2px;
+    padding-left: 25%;
+    /* right: 0; */
+    float: right;
+    width: 100%;
+  }
+  .cooki > input {
+    width: 37%;
   }
   .rightside {
     display: none;
