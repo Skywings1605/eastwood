@@ -19,6 +19,9 @@ import { Navbar } from "./Navbar.jsx";
 import axios from "axios"
 import { Form } from "./Form.jsx";
 import { PopupDiv } from "./PopUp.jsx";
+import WindowPopup from "./WindowPopup.jsx";
+
+
 export const Main = () => {
     const [timer, setTimer] = useState(0);
     const [acre, setAcre] = useState(0);
@@ -96,6 +99,7 @@ export const Main = () => {
         </div>
 
             <div className="eyediv reveal">
+                <WindowPopup/>
                 <h1 className="eyetext">EYE-CATCHING LOCATIONS WITH EXCEPTIONAL SPECIALTIES AT GREAT PRICES.</h1>
                 <div className="eyeicons">
                     <div className="grid">
