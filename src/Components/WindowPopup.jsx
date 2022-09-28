@@ -72,7 +72,6 @@ export default function WindowPopup() {
   return (
     <div>
       <Button onClick={handleClickOpen}>
-        PopUp
       </Button>
       <Dialog
         open={open}
