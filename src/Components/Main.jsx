@@ -1,25 +1,22 @@
 import Slides from "./Slides.jsx";
-
-import fb from "./Images/facebook.png"
-import inst from "./Images/facebook.png"
-import twi from "./Images/facebook.png"
-import  mail from "./Images/facebook.png"
-import call from "./Images/facebook.png"
-import icon1 from "./Images/icon1.png"
-import icon2 from "./Images/icon2.png"
-import icon3 from "./Images/icon3.png"
-import icon4 from "./Images/icon4.png"
+import icon1 from "./Images/icon1.webp"
+import icon2 from "./Images/icon2.webp"
+import icon3 from "./Images/icon3.webp"
+import icon4 from "./Images/icon4.webp"
 
 
 import"./Main.css";
-import logo from "./Images/eastlogo.svg";
-import indus from "./Images/indus.png";
+import indus from "./Images/indus.webp";
 import { useEffect, useState } from "react"
-import { Navbar } from "./Navbar.jsx";
-import axios from "axios"
+
 import { Form } from "./Form.jsx";
 import { PopupDiv } from "./PopUp.jsx";
 import WindowPopup from "./WindowPopup.jsx";
+import fb from "./Images/fb.webp";
+import insta from "./Images/insta.webp";
+import twitter from "./Images/twitter.webp";
+import youtube from "./Images/youtube.webp";
+import mail from "./Images/mail.webp";
 
 
 export const Main = () => {
@@ -159,20 +156,10 @@ export const Main = () => {
                        
                         <p>At Eastwood, we believe that mother earth is the greatest Equalizer. You can't get away from it. The heavenly nature land offers you beautiful and plots in Bangalore with the least price. Situated in the middle of green city <strong>Hoskote</strong> where you can raise your inner consciousness.</p>
 
-                        
-                        {/* <div class="wrap">
-                        <a href={require("./Images/IFB_Eastwood_Brochure.pdf")} download="IFB_Eastwood_Brochure">
-
-                            <button class="button">
-                                Download Brochure
-                            </button>
-                        </a>
-                        </div> */}
-
                     </div>
                     
                     <div className="rightpro">
-                    <iframe id="download" width="460" height="271" src="https://www.youtube.com/embed/HxsRa_VWNXQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoPlay="true"></iframe>
+                    <iframe id="download" width="460" height="271" src="https://www.youtube.com/embed/HxsRa_VWNXQ?autoplay=1&mute=1&loop=1&playlist=HxsRa_VWNXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoPlay="true"></iframe>
                     </div>
                     <p ></p>
                     </div>
@@ -196,38 +183,25 @@ export const Main = () => {
                     <li>Outer Ring Road Junction is at easy connectivity.</li>
                 </ul>
                 <div className="googlemap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.0918132842153!2d77.85673461954102!3d13.156608361099371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae075351f94731%3A0x16a6269175d7282e!2sEastwood%20-%20Residential%20Plots%20In%20Hoskote!5e0!3m2!1sen!2sin!4v1663232742972!5m2!1sen!2sin" width="600" height="480" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.0918132842153!2d77.85673461954102!3d13.156608361099371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae075351f94731%3A0x16a6269175d7282e!2sEastwood%20-%20Residential%20Plots%20In%20Hoskote!5e0!3m2!1sen!2sin!4v1663232742972!5m2!1sen!2sin" title="googlemap" width="600" height="480" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 </div>
 
             </div>
             </section>
-            
-            {/* <div className="formdiv" id="contact">
-                    <div className="righth3">
-                        <h3>BOOK A SITE VISIT NOW</h3>
-                    </div>
-                    <form action="" >
-                    <input type="text" onChange={handleChange} value={values.name} className="name" placeholder="Name" required /><hr />
-                    <input type="text" onChange={handleChange} value={values.email} className="email" placeholder="Email" required /><hr />
-                    <input type="number" onChange={handleChange} value={values.phone} className="phone" placeholder="Mobile No" required /><hr />
-                    <button onClick={handleSubmit} className="btn">Here You Go<img src={""} alt="" className="imgArrow"/></button>
-                    </form>
-                    
-                </div> */}
                 <p id="form"></p>
             <section id="contactus">
             <p id="contact"></p>
             <div className="btm reveal" >
             <div className="icns reveal">
-                <a href="https://www.facebook.com/ifbeastwood" target={1} className="fb"><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494479.png"} alt="" /></a>
-                <a href="https://twitter.com/IfbEastwood_blr" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494481.png"} alt="" /></a>
-                <a href="https://instagram.com/ifbeastwood_blr?igshid=YmMyMTA2M2Y=" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/2111/2111463.png"} alt="" /></a>
-                <a href="https://www.youtube.com/watch?v=HxsRa_VWNXQ" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/4494/4494487.png"} alt="" /></a>
-                <a href="mailto: ifbeastwoodblr@gmail.com" target={1}><img src={"https://cdn-icons-png.flaticon.com/512/552/552486.png"} alt="" className="mail" /></a>
+                <a href="https://www.facebook.com/ifbeastwood" target={1} className="fb"><img src={fb} alt="" /></a>
+                <a href="https://twitter.com/IfbEastwood_blr" target={1}><img src={twitter} alt="" /></a>
+                <a href="https://instagram.com/ifbeastwood_blr?igshid=YmMyMTA2M2Y=" target={1}><img src={insta} alt="" /></a>
+                <a href="https://www.youtube.com/watch?v=HxsRa_VWNXQ" target={1}><img src={youtube} alt="" /></a>
+                <a href="mailto: ifbeastwoodblr@gmail.com" target={1}><img src={mail} alt="" className="mail" /></a>
                 </div>
                 <div className="address">
-                    <div className="addiv">
+                    <div className="addi">
                     <p><strong>Address</strong></p>
                     <p>Sy Nos. 31/7,</p>
                     <p>31/8, 31/11 & 35,</p>
@@ -238,7 +212,7 @@ export const Main = () => {
                         <p>Karnataka.</p>
                         
                     </div>
-                    <div className="addiv">
+                    <div className="addi">
                         
                     <p><strong>Contact us</strong></p> 
                     <p><a href="tel:+919707822822">+91 9707 822 822</a></p>

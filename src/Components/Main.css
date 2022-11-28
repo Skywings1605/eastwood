@@ -432,10 +432,10 @@ display: none;
   .pop:focus {
     /*  */
   }
-  .addiv {
+  .addi {
     list-style: 0px;
   }
-  .addiv>p {
+  .addi>p {
     /* margin-top: 0px; */
     margin-bottom: 5px;
   }

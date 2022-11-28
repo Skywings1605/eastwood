@@ -24,22 +24,10 @@
     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <link
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
   rel="stylesheet"
 />
-<script type='text/javascript'>
-  (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'BRum5WiLqR7LGH9vR_c', {});
-</script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet'>
@@ -50,37 +38,40 @@
                   
 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 
+<!-- ..........WhatsApp------------ -->
+
 <script>
-      (function (Q, R) {
-          if(Q.qr) return;
-          var u = 'https://webview.quickreply.ai/whatsapp/script.min.js';
-          var h = R.head || R.documentElement;
-          var e = R.createElement('script');
-          e.type = 'text/javascript';
-          e.async = true;
-          e.src = u;
-          Q.qr = {
-              brandSetting: {
-                  includePageLink: false,
-                  messageText: "Hi.. I have a query.",
-                  phoneNumber: "+919606795107"
-              },
-              chatButtonSetting: {
-                  sideMargin: 20,
-                  marginBottom: 20,
-                  position: "left",
-                  buttonType: "ICON_TEXT",
-                  buttonText: "Chat Now",
-                  buttonBgColor: "#04AA6D",
-                  buttonTextColor: "#fff"
-              }
-          };
-          e.onload = function () {
-              CreateWhatsappChatWidget(Q.qr);
-          };
-          h.insertBefore(e, h.lastChild);
-      })(window, document);
+  (function (Q, R) {
+      if(Q.qr) return;
+      var u = 'https://webview.quickreply.ai/whatsapp/script.min.js';
+      var h = R.head || R.documentElement;
+      var e = R.createElement('script');
+      e.type = 'text/javascript';
+      e.async = true;
+      e.src = u;
+      Q.qr = {
+          brandSetting: {
+              includePageLink: false,
+              messageText: "Hi.. I have a query.",
+              phoneNumber: "+919606795107"
+          },
+          chatButtonSetting: {
+              sideMargin: 20,
+              marginBottom: 20,
+              position: "left",
+              buttonType: "ICON_TEXT",
+              buttonText: "Chat Now",
+              buttonBgColor: "#81c244",
+              buttonTextColor: "#fff"
+          }
+      };
+      e.onload = function () {
+          CreateWhatsappChatWidget(Q.qr);
+      };
+      h.insertBefore(e, h.lastChild);
+  })(window, document);
 </script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -102,13 +93,34 @@
   gtag('event', 'conversion', {'send_to': 'AW-10986227399/pa4dCNGxpN4DEMeN0vYo'});
 </script>
 
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "dkd1xvb5a0");
+    
+  <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '471381201592380');
+  fbq('track', 'PageView');
   </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=471381201592380&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- --------Clarity-------- -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e2c9sahllf");
+</script>
+  
     <title>Eastwood</title>
   </head>
   <body >
@@ -150,21 +162,18 @@
         document.getElementById("rightMenu").style.display = "none";
       }
       </script>
-
-<script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-emailjs.init("A5p3aZgjOitQbS0OP");
-})();
-</script>
                             
     <!-- Whatsapp -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type='text/javascript'>
-      (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'BRum5WiLqR7LGH9vR_c', {});
-    </script>
+    
+    <!-- .............ChatBot............. -->
+
+                            
+<script type='text/javascript'>
+  (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'edzzGcp637vc5NYEt_c', {});
+</script>
+                  
+
     <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
@@ -173,26 +182,10 @@ emailjs.init("A5p3aZgjOitQbS0OP");
     <div id="root">
             
     </div>
-  <!-- Begin Mailchimp Signup Form -->
-
-
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3X2XKH"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Go to www.addthis.com/dashboard to customize your tools --> 
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63243202fb2774c8"></script>
   
   </body>
 </html>
